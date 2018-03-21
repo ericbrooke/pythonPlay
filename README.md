@@ -7,3 +7,8 @@ https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set
 
 ## Atom
 https://atom.io/packages/ide-python
+
+## functions
+```python
+python3 -m pydoc input
+```
