@@ -12,3 +12,21 @@ https://atom.io/packages/ide-python
 ```python
 python3 -m pydoc input
 ```
+
+commands used:
+
+print
+#
+()*/+_
+from
+import sys, os.path,
+open
+close
+readline
+truncate
+write
+seek
+def
+len
+return
+input
