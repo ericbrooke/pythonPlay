@@ -1,3 +1,8 @@
+directions = ['north', 'south', 'west', 'east']
+verbs = ['go', 'kill', 'eat']
+stops = ['the', 'in', 'of']
+nouns = ['bear', 'princess']
+
 
 def scan(text):
 
@@ -6,25 +11,23 @@ def scan(text):
 
     for word in word_list:
 
-        #  directions
-        if word in ('north', 'south', 'west', 'east'):
+        if word in directions:
             processed_tuples.append(("direction", word))
 
-        #  verbs
-        if word in ('go', 'kill', 'eat'):
+        elif word in verbs:
                 processed_tuples.append(("verb", word))
 
-        #  stop
-        if word in ('the', 'in', 'of'):
+        elif word in stops:
                 processed_tuples.append(("stop", word))
 
-        #  noun
-        if word in ('bear', 'princess'):
+        elif word in nouns:
                 processed_tuples.append(("noun", word))
 
-        #  number
-        if convert_numbers(word):
+        elif convert_numbers(word):
                 processed_tuples.append(("number", int(word)))
+
+        else:
+            processed_tuples.append(("error", word))
 
     return processed_tuples
 
