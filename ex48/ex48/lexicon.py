@@ -6,7 +6,7 @@ nouns = ['bear', 'princess']
 
 def scan(text):
 
-    word_list = text.split()
+    word_list = text.lower().split()
     processed_tuples = []
 
     for word in word_list:
@@ -15,16 +15,16 @@ def scan(text):
             processed_tuples.append(("direction", word))
 
         elif word in verbs:
-                processed_tuples.append(("verb", word))
+            processed_tuples.append(("verb", word))
 
         elif word in stops:
-                processed_tuples.append(("stop", word))
+            processed_tuples.append(("stop", word))
 
         elif word in nouns:
-                processed_tuples.append(("noun", word))
+            processed_tuples.append(("noun", word))
 
         elif convert_numbers(word):
-                processed_tuples.append(("number", int(word)))
+            processed_tuples.append(("number", int(word)))
 
         else:
             processed_tuples.append(("error", word))
